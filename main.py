@@ -4,27 +4,22 @@ from core.orchestrator import run_lesson_pipeline
 
 
 def main():
-
-    print("======================================")
-    print(" SELF-EVALUATING LESSON CONTENT GENERATOR")
-    print("======================================")
-
     topic = "Introduction to RAG"
 
-    result = run_lesson_pipeline(
-        client=client,
-        topic=topic
-    )
+    print("\n=== SELF-EVALUATING LESSON GENERATOR ===")
+    print(f"Topic: {topic}")
 
-    print("\n========== FINAL STATUS ==========")
-    print(result["status"])
+    result = run_lesson_pipeline(client, topic)
 
-    print(f"Total attempts: {result['attempts']}")
+    print("\n=== FINAL RESULT ===")
+    print(f"Status: {result['status']}")
+    print(f"Total Attempts: {result['attempts']}")
 
     if result["status"] == "APPROVED":
-        print("The lesson is ready for human review.")
+        print("\nLesson successfully generated and approved!")
+        print("Ready for human review.")
     else:
-        print("The lesson did not meet the required quality bar.")
+        print("\nLesson failed the quality evaluation.")
 
 
 if __name__ == "__main__":

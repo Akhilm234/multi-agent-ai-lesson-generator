@@ -5,39 +5,39 @@
             "id": "C1",
             "criterion": "Accuracy",
             "status": "PASS",
-            "reason": "The lesson accurately describes the three core stages of RAG: retrieving relevant documents from an external source, augmenting the user prompt with the retrieved context, and generating an answer grounded in that context using a language model."
+            "reason": "The lesson accurately describes RAG and clearly delineates the three core components: Retrieval (querying vector databases using semantic search), Augmentation (injecting retrieved text chunks into the prompt context), and Generation (the LLM producing an answer grounded in the provided context)."
         },
         {
             "id": "C2",
             "criterion": "Beginner Friendly",
             "status": "PASS",
-            "reason": "The lesson is accessible to readers with no technical background, using clear, intuitive analogies such as closed-book versus open-book exams and defining baseline terms in plain English."
+            "reason": "The lesson utilizes an effective open-book vs. closed-book exam analogy and explains concepts without assuming prior knowledge of artificial intelligence or programming."
         },
         {
             "id": "C3",
             "criterion": "Practical Examples",
             "status": "PASS",
-            "reason": "The lesson includes multiple practical examples, notably an end-to-end walkthrough of a bakery adding a new drink to its menu update file and an employee inquiring about a remote work policy."
+            "reason": "The lesson includes clear, relatable examples, such as the company paternity leave policy workflow and the Acme Gadgets smart blender troubleshooting scenario contrasting AI behavior with and without RAG."
         },
         {
             "id": "C4",
             "criterion": "Jargon Clarity",
             "status": "PASS",
-            "reason": "Technical concepts including Artificial Intelligence, Language Model, Hallucination, and Knowledge Base are defined clearly at or before the point of introduction without relying on undefined jargon."
+            "reason": "Technical terms such as LLM, hallucination, knowledge cutoff, vector, embedding, chunking, and semantic search are explicitly defined in simple, intuitive language upon introduction."
         },
         {
             "id": "C5",
             "criterion": "Completeness",
             "status": "PASS",
-            "reason": "The lesson covers all required aspects: definition of RAG, why it is needed, step-by-step mechanics, practical benefits, and real-world limitations such as reliance on source quality and latency."
+            "reason": "The lesson covers all required aspects: what RAG is, why it is needed, how it works in detail (preparation and answering phases), its key advantages, and its limitations (e.g., retrieval failure, latency, formatting issues)."
         },
         {
             "id": "C6",
             "criterion": "Teaching Flow",
             "status": "PASS",
-            "reason": "The progression is logical and structured, starting with an introductory problem statement, explaining core mechanisms conceptually, detailing the technical flow, providing concrete application examples, analyzing tradeoffs, and concluding with a summary."
+            "reason": "The lesson follows a coherent structure starting with an intuitive introduction, proceeding through definitions, motivations, architectural concepts, step-by-step processes, examples, trade-offs, and concluding with a concise summary."
         }
     ],
     "rejection_reasons": [],
-    "improvement_summary": "No improvements required. The lesson meets all rubric criteria with technically accurate, accessible, and complete explanations."
+    "improvement_summary": "The lesson meets all rubric criteria effectively. Further enhancements could include brief visual diagrams or code snippets for learners interested in technical implementation."
 }

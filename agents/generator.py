@@ -3,31 +3,34 @@ from prompts.generator_prompt import (
     GENERATOR_SYSTEM_PROMPT,
     build_generator_prompt
 )
+from config import GEMINI_MODEL
 
 
 def generate_lesson(client, topic, feedback=None, memory_context=None):
 
-    print("\n[GENERATOR AGENT] Creating lesson...")
+    print("\n[Generator] Creating lesson...")
 
-    # Build the prompt
-    user_prompt = build_generator_prompt(
+    # Prepare instructions for Gemini
+    prompt = build_generator_prompt(
         topic=topic,
         feedback=feedback,
         memory_context=memory_context
     )
 
-    # Send instructions to Gemini
+    # Generate the lesson
     response = client.models.generate_content(
-        model="gemini-3.8-flash",
+        model=GEMINI_MODEL,
         contents=[
             GENERATOR_SYSTEM_PROMPT,
-            user_prompt
+            prompt
         ]
     )
 
-    # Extract generated lesson
+    if not response.text:
+        raise ValueError("Gemini did not generate any lesson.")
+
     lesson = response.text
 
-    print("[GENERATOR AGENT] Lesson generated successfully.")
+    print("[Generator] Lesson generated successfully.")
 
     return lesson
